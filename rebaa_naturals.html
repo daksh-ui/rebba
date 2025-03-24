@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rebaa Naturals</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-image: url('https://scontent.famd1-3.fna.fbcdn.net/v/t39.30808-6/464132537_8813415192049118_4314278475094351036_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=krLq8FOkn68Q7kNvgHN0wdV&_nc_oc=Adilu8TIhFq9ujE7R2Q49xovgxS-Ksdpn4w--T_sO81slL7Upsll1ReYqLMJzwwxkYFGoX2vMtU_9ZykjUF1wzpQ&_nc_zt=23&_nc_ht=scontent.famd1-3.fna&_nc_gid=Ahisfo3hDIVKHfuyKZDDTPb&oh=00_AYHTLVWCER_hxjWPh-ZG4hPNzJcpbD94iL642KyHfCw9GQ&oe=67D70CD4');
+      background-size: cover;
+      /* Ensure the image covers the entire screen */
+      background-position: center;
+      /* Center the image */
+      background-attachment: fixed;
+      /* Make the background image fixed while scrolling */
+      height: 100vh;
+      /* Ensure the body takes the full height of the viewport */
+      margin: 0;
+      /* Remove any default margin */
+    }
+
+    .elementor-widget-container {
+      display: flex;
+      /* Apply flexbox layout */
+      align-items: center;
+      /* Vertically center the image */
+      justify-content: center;
+      /* Horizontally center the image */
+      gap: 30px;
+      /* Optional: Space between content if there are multiple items */
+      flex-direction: column;
+      /* Keep items in a vertical column (useful for mobile view) */
+      height: 100vh;
+      /* Optional: Makes sure the container takes full height for centering */
+    }
+
+    .elementor-widget-container img {
+      max-width: 100%;
+      /* Ensure the image doesn't overflow */
+      height: auto;
+      /* Maintain the aspect ratio */
+    }
+
+    /* Adding hover effects to the card */
+    .zoom-effect {
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      /* Change cursor to pointer */
+    }
+
+    .zoom-effect:hover {
+      transform: scale(1.05);
+      /* Slight zoom effect */
+      background-color: #f8f9fa;
+      /* Change background color */
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+      /* Shadow effect on hover */
+    }
+
+    .zoom-effect img {
+      transition: transform 0.3s ease;
+    }
+
+    .zoom-effect:hover img {
+      transform: scale(1.1);
+      /* Zoom the image slightly on hover */
+    }
+
+    /* Card text color change on hover */
+    .zoom-effect:hover .card-body {
+      background-color: rgba(0, 0, 0, 0.1);
+      /* Change background color */
+    }
+
+    /* Optionally, you can change button color on hover */
+    .zoom-effect:hover .btn {
+      background-color: #007bff;
+      /* Button color change */
+      color: white;
+      /* Change text color on hover */
+    }
+
+    /* Adding a shadow effect to the card */
+    .zoom-effect {
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      /* Initial shadow effect */
+    }
+
+    /* Change shadow effect when hovering */
+    .zoom-effect:hover {
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+      /* Enhanced shadow effect */
+    }
+
+    /* GO To Page 2*/
+    .link-button {
+      background-color: #000000;
+      /* Green */
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+    .link-button:hover {
+      background-color: #02c4ff;
+      /* Darker green */
+    }
+     /* General body styling */
+     body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container for the form */
+        .contact-form-container {
+            width: 100%;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #fa7000;
+            margin-bottom: 30px;
+        }
+
+        /* Style for form fields */
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        /* Style for the submit button */
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff9900;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #cc7a00;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .contact-form-container {
+                padding: 15px;
+                margin: 20px;
+            }
+        }
+
+        /* Label styling */
+        label {
+            font-weight: bold;
+            color: #fa7000;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+       
+    /* General body styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Form field styling */
+    .form-field {
+        margin-bottom: 15px;
+    }
+
+    .form-field input, .form-field textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    /* Footer Styling */
+    footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    footer .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Social Media Links */
+    footer .social-links {
+        margin-top: 10px;
+    }
+
+    footer .social-links a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+
+    footer .social-links a:hover {
+        color: #ff9900;
+    }
+
+    /* Email Contact Section */
+    footer .email-contact {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    footer .email-contact a {
+        color: #ff9900;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer .email-contact a:hover {
+        color: #fff;
+    }
+
+    /* Copyright Section */
+    .copyright {
+        text-align: center; /* Center the text */
+        background-color: #f9f9f9; /* Soft background color */
+        color: #333; /* Dark text color */
+        padding: 25px 0;
+        font-family: 'Arial', sans-serif; /* Clean and simple font */
+        font-size: 16px;
+        border-top: 2px solid #fa7000; /* Soft border at the top */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a light shadow */
+        margin-top: 30px;
+        border-radius: 10px; /* Rounded corners for the box */
+        background: linear-gradient(145deg, #fff, #e6e6e6); /* Soft gradient background */
+        transition: all 0.3s ease; /* Smooth transition effect */
+    }
+
+    .copyright p {
+        margin: 5px 0; /* Adds space between paragraphs */
+        font-weight: normal; /* Ensures normal font weight */
+    }
+
+    .copyright strong {
+        color: #fa7000; /* Accent color for your name */
+        font-size: 1.2em; /* Slightly larger font for emphasis */
+        font-weight: bold; /* Makes the name stand out */
+    }
+
+    /* Hover effect for the copyright section */
+    .copyright:hover {
+        background: linear-gradient(145deg, #fff, #d4d4d4); /* Darker gradient on hover */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow becomes darker */
+        transform: scale(1.02); /* Slight zoom effect on hover */
+    }
+
+    /* Responsive design for small screens */
+    @media (max-width: 600px) {
+        .copyright p {
+            font-size: 14px;
+        }
+
+        .copyright {
+            padding: 20px 0; /* Less padding on smaller screens */
+        }
+
+        .copyright strong {
+            font-size: 1.1em; /* Adjust size of name for smaller screens */
+        }
+
+        footer .social-links a {
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        footer .email-contact {
+            font-size: 14px;
+        }
+    }
+
+    /* For larger screens */
+    @media (min-width: 768px) {
+        .copyright {
+            padding: 30px 0; /* More padding for larger screens */
+            font-size: 18px; /* Larger text for bigger screens */
+        }
+    }
+    /* Styling the Instagram link */
+.instagram-link {
+    color: #ff9900; /* Instagram's accent color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text for emphasis */
+}
+
+.instagram-link:hover {
+    color: #f7a700; /* Slightly darker shade when hovered */
+    text-decoration: underline; /* Add underline on hover */
+}
+  /* Scrolling text container */
+  .scrolling-text {
+            background-color: #fa7000; /* Orange background */
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 999;
+        }
+
+        /* Scrolling text animation */
+        .scrolling-text marquee {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+</style>
+
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#rebaa_naturals.html">
+          <img
+            src="data:image/jpeg;base64,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"
+            alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          Rebaa Naturals
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#d-inline-flex gap-1">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"
+                href="#https://www.google.com/maps/place/REBAA+NATURALS/@21.5352522,71.3514715,858m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be279279c39c1ad:0x8327d3873ab305ba!8m2!3d21.5352522!4d71.3514715!16s%2Fg%2F11lyl09jt5?entry=ttu&g_ep=EgoyMDI1MDMxMC4wIKXMDSoASAFQAw%3D%3D">Locatin</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#d-inline-flex gap-1" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#contact-form-container">...</a></li>
+                <li><a class="dropdown-item" href="#content-container">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item"
+                    href="#https://www.google.com wants to open this application.">Contect-Number</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- Modal-->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">તમારાં સ્વાસ્થ્યની ચિંતા તમારાં કરતાં વધારે અમને છે...!
+          </h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          તમારી રસોઈ બનશે હવેથી વધુ સ્વાદિષ્ટ અને પૌષ્ટિક કેમકે રેબા શુધ્ધ સિંગતેલ ફક્ત સ્વાદ નહિ પણ તમારાં સ્વાસ્થ્યની
+          પણ ચિંતા કરે છે.<br>🥰🥳<br>
+          <br>
+          ✨ 100% શુધ્ધ દેશી ઘાણીનું સીંગતેલ<br>
+          ✨ બારેમાસ ભરવા લાયક<br>
+          ✨ લેબોરેટરી ટેસ્ટેડ<br>
+          ✨ કેમિકલ મુકત<br>
+          ✨ ફક્ત G-20 નંબર સીંગનુજ તેલ<br>
+          <br>
+          ના ફાવે કે ના ભાવે તો આપે ચુકવેલ ૧૦૦% નાણા પરતની ગેરંટી.<br>
+          <br>
+          હવે બીજું નહીં ભાવે...<br>
+          <br>
+          તો હવે રાહ જોયા વગર 🧐 ઓર્ડર કરવા માટે આજે જ અમારો સંપર્ક કરો અને સમગ્ર ગુજરાતમાં દરેક જિલ્લામાં અને અમુક
+          તાલુકામાં પણ ડિલિવરી <br>મેળવો. વધું વિગતો માટે 🚚કોલ કરો...+91 76980 76380<div
+            class="spinner-border text-warning" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <br>
+          નોંધ: ના ફાવે તો તોડેલો ડબ્બો પણ રીટર્ન લઈ લેવામાં આવશે.✅
+          <div class="spinner-grow text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Carousel -->
+  <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://scontent.famd1-3.fna.fbcdn.net/v/t39.30808-6/468449162_970795431734093_5590715332989502408_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=VI6VGTSrehkQ7kNvgFSjBB3&_nc_oc=Adi3_jcW_70G8qfAdyyfWZ146_ooy4hVePHGSSGUU7rDujgVfA8YFMm9oM3958WGJs50M5rhob8VISlk_5lVwrL6&_nc_zt=23&_nc_ht=scontent.famd1-3.fna&_nc_gid=ADuFEkk8_kMfGMOFMRR49i_&oh=00_AYEVcUSADmolBre5_OgE1YGKPpfgj2zUazJjJsxGg0Pf_Q&oe=67D6F7C2"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://scontent.famd1-1.fna.fbcdn.net/v/t39.30808-6/480502339_1030915402388762_4014176524815709833_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=108&ccb=1-7&_nc_sid=50ad20&_nc_ohc=LDLAbZTkQZ4Q7kNvgEFe0Qw&_nc_oc=Adjp_96y0bwruQ_igBklU31mlM8rLW-MxXtC_h8a0GTpgnmMk8ZJiftbL58e02rl_CMcwS3l5W05xObO3Rhr7EdF&_nc_zt=23&_nc_ht=scontent.famd1-1.fna&_nc_gid=ACGuxKaFPZlxCjoHZgaMBON&oh=00_AYHVeOpY1qmSNK6PxzpRsPIbBhqchc0S_Cvoz-ktU_BXQA&oe=67D6CA95"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://scontent.famd1-3.fna.fbcdn.net/v/t39.30808-6/481455115_1041158048031164_6456725432163132697_n.jpg?stp=c0.169.1536.1536a_dst-jpg_s206x206_tt6&_nc_cat=100&ccb=1-7&_nc_sid=50ad20&_nc_ohc=WQ3egl-8FvMQ7kNvgGBKbJ_&_nc_oc=AdhMYgJ7EzHA2oO--zpDU8uS6roCH3hF4CNzPUpTPJqdd5AUvuqq9s_ifWFGTs1J-OMUjwXHgNdkdFgv1lBMJIS5&_nc_zt=23&_nc_ht=scontent.famd1-3.fna&_nc_gid=AmsZBujaz1M6dRAfZcdqxvg&oh=00_AYG4w18XDmx36_UX640bJYvEZjoA4yE3w6ODzlh_-N2EUQ&oe=67D6F362"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://scontent.famd1-1.fna.fbcdn.net/v/t39.30808-6/468520183_970796138400689_4647669440667278972_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=VNTXpJ9W-XEQ7kNvgGDTt5R&_nc_oc=Adg0vzWkXg0Xy57bT8mGm5Zexn1qs8ezkouTMUCg0CJlJSJjTME9mqrg86VUFN8mOd_M5-fjHDTErE8bWAo3u4kI&_nc_zt=23&_nc_ht=scontent.famd1-1.fna&_nc_gid=Ah4cvcH_Mtv_Ww_0X5HuZXH&oh=00_AYFUWTQ5t6iCa2mNMp9DKOACUILD3Dy8IicoMl8Tkz1uFA&oe=67D6D6BB"
+          class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- collapse-->
+  <p class="d-inline-flex gap-1">
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+      aria-controls="collapseExample">
+      ગુણવત્તા
+    </a>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+      aria-expanded="false" aria-controls="collapseExample">
+      Next->>
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      રેબા શુધ્ધ સીંગતેલ મોંઘુ નથી બલ્કે સસ્તું અને સારું છે...
+      ઓછાં તેલથી વધારે કામ આપશે...
+      બીજા તેલની તુલનામાં રેબા શુધ્ધ સીંગતેલ એવરેજ 20% ઓછું ખરીદવું પડશે...
+      (સરવાળે રેબા શુધ્ધ સીંગતેલ જ સસ્તું અને સારું પડશે)
+    </div>
+  </div>
+    <!-- Scrolling Text Section -->
+    <div class="scrolling-text">
+      <marquee behavior="scroll" direction="left" scrollamount="10">
+          રેબા શુદ્ધ સીંગતેલ માટે કોલ કરો. Mo. 7698076380 Mo. 9825290144 Premium G-20 Groundnut Oil Pure & Natural Healthy in Every Drop.
+      </marquee>
+  </div>
+  <!-- grid - row and columm -->
+  <div class="container text-center">
+    <div class="row">
+      <!-- 1 -->
+      <div class="col">
+        <div class="card zoom-effect" style="width: 18rem;">
+          <img
+            src="https://scontent.famd1-3.fna.fbcdn.net/v/t39.30808-6/464513380_8829777480412889_8504127010546164301_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ctqKrEj82dIQ7kNvgEPxWtR&_nc_oc=AdivEdt53tLn-YsNCxoeQKWyMusGS2sHIqXNtBNJQogYUdCZlUUxrIT1kdE3xzOSI2PZw3n6qjCxx4CDmufqdCDW&_nc_zt=23&_nc_ht=scontent.famd1-3.fna&_nc_gid=ADOfuHA3YrtB8DanuemjzyZ&oh=00_AYE7aALzh4d3eS76wLcHslbhgBsEQt2AcT85nt50c_Ozsg&oe=67D6FACF"
+            class="card-img-top" alt="rebaanaturals">
+          <div class="card-body">
+            <h5 class="card-title">fantastic</h5>
+            <p class="card-text">ફક્ત કોટનનાં કપડાં વાળા ફિલ્ટર માંથી ગાળેલું ૧૦૦% શુધ્ધ સીંગતેલ...</p>
+            <a href="https://www.youtube.com/@gujaratikhajana5710" class="btn btn-primary">Youtube</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="col">
+        <div class="card zoom-effect" style="width: 18rem;">
+          <img
+            src="https://scontent.famd1-1.fna.fbcdn.net/v/t39.30808-6/464110069_8819650684758902_1524376873630613685_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=g069zevCpa4Q7kNvgGfDlII&_nc_oc=AdgOC6Mi5Ha1OoAlC51rKRwou8h59rowKYPyZ-dHNzy3xzl6bCMLCefb7aGiThKFWUmCyt33HlZ1dkfI1QM_AqRW&_nc_zt=23&_nc_ht=scontent.famd1-1.fna&_nc_gid=AjFkBqMVU9lSfLM48yOF5Ft&oh=00_AYE-Atjr_gvoP2MsvhDJA8Y0yK_nNXAu6XqXcuJDT3DHnw&oe=67D70C50"
+            class="card-img-top" alt="rebaanaturals">
+          <div class="card-body">
+            <h5 class="card-title">કેમ છો મજામા!!</h5>
+            <p class="card-text">Purity in Every Drops</p>
+            <a href="https://www.facebook.com/profile.php?id=100064109347220" class="btn btn-primary">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="col">
+        <div class="card zoom-effect" style="width: 18rem;">
+          <img
+            src="https://scontent.famd1-1.fna.fbcdn.net/v/t39.30808-6/464704977_8850972401626730_2589525569158571083_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=WBHJCojD26cQ7kNvgHxSYe4&_nc_oc=Adixr76xUkrzkZUJiJZAMdcv5UEo3Ug-DjVJxgzPiuVZBijg6a6IFHu6pjbxCJfBgstsMv68Ha0GYOPx0CzBD1cF&_nc_zt=23&_nc_ht=scontent.famd1-1.fna&_nc_gid=AT7EYTyRdwIXn6CFbK0euvM&oh=00_AYFuFUebEDL8J7t-Vw2G5a7gscQsejx4VkOwY809SpbACA&oe=67D70720"
+            class="card-img-top" alt="rebaanaturals">
+          <div class="card-body">
+            <h5 class="card-title">kind</h5>
+            <p class="card-text">No Chemicals,<br>
+              No Preservatives,<br>
+              No Artificial Colours,<br>
+              No Artificial Flavours,<br>
+              100 % Naturals</p>
+            <a href="clicke.html" class="btn btn-primary">Touch here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><br><br><br><br>
+  <!-- Video -->
+  <div class="container text-center">
+    <div class="row">
+
+      <!-- Go TO Page 2-->
+      <a href="rebaanaturals.html">
+        <button class="link-button">More...<div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div></button>
+      </a>
+       <!-- Contact Us Form -->
+    <div class="contact-form-container">
+      <h1>Contact Us</h1>
+      <form action="submit_form.php" method="POST">
+          <!-- Name Field -->
+          <div class="form-field">
+              <label for="name">Full Name:</label>
+              <input type="text" id="name" name="name" required placeholder="Enter your full name">
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-field">
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required placeholder="Enter your email address">
+          </div>
+
+          <!-- Address Field -->
+          <div class="form-field">
+              <label for="address1">Address Line 1:</label>
+              <input type="text" id="address1" name="address1" required placeholder="Enter your address line 1">
+          </div>
+          <div class="form-field">
+              <label for="address2">Address Line 2:</label>
+              <input type="text" id="address2" name="address2" placeholder="Enter your address line 2 (optional)">
+          </div>
+
+          <!-- Phone Number Fields -->
+          <div class="form-field">
+              <label for="phone1">Phone Number 1:</label>
+              <input type="tel" id="phone1" name="phone1" required placeholder="Enter your phone number 1">
+          </div>
+          <div class="form-field">
+              <label for="phone2">Phone Number 2 (Optional):</label>
+              <input type="tel" id="phone2" name="phone2" placeholder="Enter your phone number 2 (optional)">
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit">Submit</button>
+      </form>
+      
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-container">
+          <!-- Social Media Links -->
+          <div class="social-links">
+              <a href="https://www.facebook.com/people/Rebaa-Naturals/100064109347220/" target="_blank">Facebook</a>
+              <a href="https://twitter.com" target="_blank">Twitter</a>
+              <a href="https://www.instagram.com/rebaa_naturals/" target="_blank">Instagram</a>
+              <a href="https://www.google.com wants to open this application." target="_blank">Phone-number</a>
+          </div>
+
+          <!-- Email Contact Section -->
+          <div class="email-contact">
+              <p>Have a question? Reach us via email at: <a href="mailto:contact@rebaanaturals.com">contact@rebaa_naturals.com</a></p>
+          </div>
+
+<!-- Copyright Section -->
+<div class="copyright">
+  <p>&copy; 2025 Rebaa Naturals. All Rights Reserved.</p>
+  <p>Website created by <strong>Daksh Ladola</strong>.</p>
+  <p>Contact me on <a href="https://www.instagram.com/daksh_ladola?igsh=dHc4NDEybjdkZGxi" target="_blank" class="instagram-link">Instagram</a>.</p>
+</div>
+      </div>
+  </footer>
+      <!-- -->
+      <div class="container-fluid text-center md-5">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2 bg-warning border-primary">
+            1 0f 2
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-2 bg-warning border border-primary">
+            2 0f 2
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

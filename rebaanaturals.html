@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebaa Naturals - Process</title>
+    <style>
+        /* Background image */
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHvG4cxMqKtxiNnWmhSgijvs50JZOIMOzn1w&s');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            /* White text for contrast */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+    
+        .Naturality {
+            color: #45a049;
+        }
+    
+        .natural {
+            color: #0c6911;
+        }
+    
+        .Originality {
+            color: #0d67ee;
+        }
+    
+        .original {
+            color: rgb(0, 81, 255);
+        }
+    
+        .Fresh {
+            color: black;
+        }
+    
+        .fresh {
+            color: #59c55e;
+        }
+    
+        .Freshh {
+            color: orange;
+        }
+    
+        .freshh {
+            color: orangered;
+        }
+    
+        .Traditional {
+            color: slateblue;
+        }
+    
+        .traditional {
+            color: salmon;
+        }
+    
+        .Filtering {
+            color: sienna;
+        }
+    
+        .filtering {
+            color: saddlebrown;
+        }
+    
+        .Packing {
+            color: rgb(0, 102, 255);
+        }
+    
+        .packing {
+            color: rgb(0, 78, 247);
+        }
+    
+        .Delivering {
+            color: yellow;
+        }
+    
+        .delivering {
+            color: rgb(255, 217, 0);
+        }
+    
+        .RETURNING {
+            color: #003366;
+        }
+    
+        .Returning {
+            color: #333333;
+        }
+    
+        .returning {
+            color: #003366;
+        }
+    
+        .what {
+            color: #003366;
+        }
+    
+        .can {
+            color: aqua;
+        }
+    
+        .we {
+            color: #59c55e;
+        }
+        
+        #what{
+            color: #003366;
+        }
+        #mr{
+            color: navy;
+        }
+        #ceo{
+            color: rgb(24, 95, 6);
+        }
+        /* Style for the link button */
+        .link-button {
+            background-color: #4CAF50;
+            /* Green */
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            /* Larger font size */
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            margin: 20px;
+            text-align: center;
+            display: inline-block;
+        }
+    
+        .link-button:hover {
+            background-color: #45a049;
+            /* Darker green */
+        }
+    
+        /* Center-align main headings */
+        h1 {
+            text-align: center;
+            font-size: 50px;
+            /* Increase font size */
+            margin-top: 50px;
+        }
+    
+        h2,
+        p {
+            font-size: 22px;
+            /* Increased font size */
+            text-align: left;
+            margin-left: 20px;
+            font-weight: bold;
+            /* Make text bold */
+        }
+    
+        /* Container for content */
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* Add some gap between the sections */
+            padding: 20px;
+        }
+    
+        /* Left section with text */
+        .text-section {
+            width: 100%;
+            max-width: 45%;
+        }
+    
+        /* Right section with image */
+        .image-section {
+            width: 100%;
+            max-width: 45%;
+            text-align: center;
+        }
+    
+        /* Ensure image is responsive */
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+        }
+    
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            .text-section,
+            .image-section {
+                max-width: 100%;
+            }
+    
+            .image-section img {
+                width: 80%;
+                /* Reduce image size on smaller screens */
+            }
+    
+            h1 {
+                font-size: 55px;
+                /* Adjust heading size on small screens */
+            }
+    
+            h2,
+            p {
+                font-size: 38px;
+                /* Smaller text size for smaller screens */
+            }
+    
+            .link-button {
+                font-size: 38px;
+                /* Adjust button size for smaller screens */
+            }
+        }
+    
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            .text-section {
+                padding-left: 0;
+                text-align: left;
+                /* Align text left on small screens */
+            }
+    
+            h2,
+            p {
+                font-size: 18px;
+                /* Smaller font size for mobile */
+            }
+        }
+    
+        /* Left section with text */
+        .text-section {
+            flex: 1;
+            text-align: left;
+            padding-left: 20px;
+        }
+    
+        /* Right section for Instagram embed */
+        .instagram-section {
+            flex: 1;
+            text-align: center;
+            padding-right: 20px;
+        }
+    
+        /* Responsive layout for smaller screens */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            .text-section,
+            .instagram-section {
+                flex: 1;
+                padding: 0;
+            }
+    
+            h2,
+            p,
+            h3 {
+                font-size: 18px;
+                /* Smaller font size for mobile */
+            }
+        }
+    
+        /* Ensure video is responsive */
+        .video-section video {
+            max-width: 100%;
+            height: auto;
+        }
+    
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            .text-section,
+            .video-section {
+                max-width: 100%;
+            }
+        }
+    
+        /* Media query for smaller screens */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                text-align: center;
+            }
+    
+            .image-section img {
+                width: 80%;
+                /* Ensure image is smaller on mobile */
+                margin-bottom: 20px;
+                /* Space between image and text */
+            }
+        }
+    
+        /* Style for the overall team section */
+        .team-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+    
+        /* Style for the team title */
+        .team-title {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    
+        /* Style for the team member container */
+        .team-member {
+            display: inline-block;
+            text-align: center;
+            padding: 20px;
+        }
+    
+        /* Style for the team member image */
+        .team-image {
+            width: 100%;
+            max-width: 400px;
+            /* Restricting the max-width */
+            height: auto;
+            border-radius: 10px;
+            /* Optional: add border-radius for rounded corners */
+            margin-bottom: 20px;
+        }
+    
+        /* Style for the name and title */
+        .team-member h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    
+        .team-member p {
+            font-size: 18px;
+            color: #777;
+            /* Light gray color for the text */
+        }
+             /* Scrolling text container */
+        .scrolling-text-wrapper {
+            width: 100%;
+            overflow: hidden;
+            background-color: #fa7000; /* Orange background */
+            color: white;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            padding: 10px 0;
+            z-index: 999;
+        }
+
+        /* Scrolling text animation */
+        .scrolling-text {
+            display: inline-block;
+            padding-left: 100%;  /* Start the text off-screen */
+            animation: scroll-left 10s linear infinite;  /* Scroll the text continuously */
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        /* Keyframe animation to scroll text */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);  /* Start at the right side */
+            }
+            100% {
+                transform: translateX(-100%); /* End at the left side */
+            }
+        }
+
+        /* General styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Scrolling text container */
+        .scrolling-text {
+            background-color: #105c0d; /* Orange background */
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            z-index: 999;
+        }
+
+        /* Scrolling text animation */
+        .scrolling-text marquee {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+        <!-- Button to navigate to another page -->
+        <a href="rebaa_naturals.html">
+            <button class="link-button">WELCOME</button>
+        </a>
+        <h1 class="can"><i>A few words about <b class="we">Rebaa Naturals</b><i></h1>
+        
+        <br>
+        <!-- Link to Second Page -->
+        <a href="natruls.html">
+            <button class="link-button">Our Police</button>
+        </a>
+    <!-- Main content -->
+    <div class="content-container">
+        <!-- Left Section (Text) -->
+        <div class="text-section">
+            <h1 class="RETURNING"><b>RETURNING TO<br>ORIGINAL<br>GOODNESS</b></h1>
+            <br><br>
+            <p class="Returning">કોવિડ-૧૯ મહામારીના અંધાધૂંધી દરમિયાન, અમદાવાદ<br>જેવા વ્યસ્ત શહેરમાં, એક સરળ વિચારે રસોઈ તેલની દુનિયા<br>બદલી નાખી. અમારા સ્થાપક, શહેરમાં નવા હતા, તેમણે ઘરે બનાવેલા<br>ભોજનના વાસ્તવિક સ્વાદ ચૂકી ગયા. તેમને સમજાયું કે શું ખૂટે છે - સાચા, મૂળ તેલનો શુદ્ધ સ્વાદ.</p>
+            <br>
+            <p class="returning">આ ઇચ્છા આ શુદ્ધ તેલને અન્ય લોકો સાથે શેર કરવાની ઇચ્છામાં ફેરવાઈ ગઈ.<br><mark>ઓક્ટોબર 2020</mark> માં, નાના શહેર <mark>અમરેલીમાં</mark>, એક <mark>નાની તેલ ફેક્ટરી</mark> શરૂ કરવામાં આવી. નાના શહેર અમરેલીનો <mark>ઉપયોગ</mark> કરીને, એક નાની તેલ ફેક્ટરી શરૂ કરવામાં આવી.<mark> શ્રેષ્ઠ G-20 મગફળીનો</mark> ઉપયોગ કરીને, મગફળીના તેલનો પ્રથમ બેચ બનાવવામાં આવ્યો, અને એક <mark>નવો</mark> અધ્યાય શરૂ થયો.</p>
+        </div>
+
+        <!-- Right Section (Video) -->
+        <div class="video-section">
+            <video class="elementor-video"
+                src="https://rebaanaturals.com/wp-content/uploads/2025/01/રેબા-શુધ્ધ-સીંગતેલ.-Healthy-meals-start-with-pure-oil-Cook-with-love-cook-with-Rebaa-Naturals-–-the-secret-to-delicious-and-nutritious-dishes-RebaaNaturalsRebaaNaturals-CookingOil-HealthyCooking-P.mp4"
+                autoplay controls controlslist="nodownload">
+            </video>
+        </div>
+    </div>
+        <!-- Main content container -->
+        <div class="content-container">
+            <!-- Left Section (Image) -->
+            <div class="image-section">
+                <img src="https://rebaanaturals.com/wp-content/uploads/2025/01/get-1.jpeg" alt="Rebaa Naturals">
+            </div>
+    
+            <!-- Right Section (Text) -->
+            <div class="text-section">
+                <h1>WE deliver fresh products</h1>
+                <p>
+                    Mauris rhoncus orci in imperdiet placerat.<br>
+                    Vestibulum euismod nisl suscipit ligula volutpat,<br>
+                    a feugiat urna maximus. Lorem ipsum dolor.
+                </p>
+                <img decoding="async" width="551" height="93" src="https://rebaanaturals.com/wp-content/uploads/2025/01/Untitled-design-1.png" alt="Rebaa Naturals">
+            </div>
+        </div>
+        <div class="team-section">
+            <h1 class="team-title" id="what"><i>Our team</i></h1>
+            <div class="team-member">
+                <img decoding="async" width="947" height="960" src="https://rebaanaturals.com/wp-content/uploads/2025/01/bharatbhai.jpg" class="team-image" alt="Mr. Bharat Shekhaliya" />
+                <h2 class="team-title" id="mr">Mr. Bharat Shekhaliya</h2>
+                <p class="team-title" id="ceo">CEO, Founder</p>
+            </div>
+        </div>
+    <!-- Main content -->
+    <br>
+    <h1 class="what"><i>what do we do?</i></h1>
+    <br><br><br>
+          <!-- Scrolling Text Section -->
+    <div class="scrolling-text">
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+            રેબા શુદ્ધ સીંગતેલ માટે કોલ કરો. Mo. 7698076380 Mo. 9825290144 Premium G-20 Groundnut Oil Pure & Natural Healthy in Every Drop.
+        </marquee>
+    </div>
+    <div class="content-container">
+        <!-- Left Section (Text) -->
+        <div class="text-section">
+            <h2 class="what"><mark>રેબા તેલની<br> તીવ્ર સુગંધ અને<br>  સંપૂર્ણ સ્વાદ</mark></h2>
+            <br><br>
+            <p class="what">"રેબા તેલની સમૃદ્ધ સુગંધ અને સંપૂર્ણ સ્વાદે ઝડપથી પડોશીઓ અને મિત્રોનું મન જીતી લીધું. તે ઘરનો સ્વાદ હતો, જે લોકોને સરળ અને ગામડાના સમયની યાદ અપાવતો હતો. સકારાત્મક પ્રતિભાવથી પ્રોત્સાહિત થઈને, અમારા સ્થાપકે મૂળ તેલના ફાયદાઓ વિશે વાત ફેલાવવાનું નક્કી કર્યું, જે આજકાલ સામાન્ય બની ગયેલા પ્રોસેસ્ડ તેલથી અલગ હતું." </p>
+            <br><br>
+
+            <h2 class="what"><mar>શુદ્ધતા</mar></h2><br>
+            <p class="what">અમારા તેલના દરેક ટીપામાં ઉચ્ચતમ શુદ્ધતા સુનિશ્ચિત કરવા માટે, અમે ફક્ત ખેડૂતો પાસેથી સીધા મેળવેલા શ્રેષ્ઠ ગુણવત્તાવાળા મગફળીનો ઉપયોગ કરીએ છીએ.</p><br>
+
+            <h2 class="Naturality"><mark>
+                પ્રાકૃતિકતા</mark></h2><br>
+            <p class="natural">અમે ખાતરી કરીએ છીએ કે અમારું તેલ પ્રોસેસ્ડ તેલનો કુદરતી અને આરોગ્યપ્રદ વિકલ્પ રહે, અમારા સાથી ગ્રાહકોના સુખાકારી પર ધ્યાન કેન્દ્રિત કરીએ.</p><br>
+
+            <h2 class="Originality"><mark>
+                મૌલિકતા</mark></h2><br>
+            <p class="what">
+                આપણું તેલ પરંપરાગત પદ્ધતિઓનો ઉપયોગ કરીને બનાવવામાં આવે છે, જેમાં કુદરતી પોષક તત્વો અને સ્વાદો યથાવત રહે છે.</p><br>
+        </div>
+
+        <!-- Right Section (Image) -->
+        <div class="image-section">
+            <img loading="lazy" decoding="async" width="1080" height="1080" src="https://rebaanaturals.com/wp-content/uploads/2025/01/get.jpeg" class="attachment-large size-large wp-image-397" alt="">
+        </div>
+    </div>
+    <div class="content-container">
+        <!-- Left Section (Image) -->
+        <div class="image-section">
+            <img loading="lazy" decoding="async" width="1200" height="840" src="https://rebaanaturals.com/wp-content/uploads/2019/12/pngegg-1280x896-1-1200x840.png" class="attachment-large size-large wp-image-224" alt="">
+        </div>
+
+        <!-- Right Section (Text) -->
+        <div class="text-section">
+            <h2 class="Fresh"><mark>
+                તાજા અને સ્વસ્થ<br> ઉત્પાદનો</mark></h2>
+            <br>
+
+            <h2 class="what">
+                મગફળીની ખેતી</h2>
+            <br>
+            <p class="fresh">અમારી યાત્રા શુદ્ધતા અને ટકાઉપણું પ્રત્યેની અમારી પ્રતિબદ્ધતા શેર કરતા વિશ્વસનીય ખેડૂતો દ્વારા ઉગાડવામાં આવતી<br> શ્રેષ્ઠ ગુણવત્તાવાળી G-20 મગફળી કાળજીપૂર્વક પસંદ કરવાથી શરૂ થાય છે.</p>
+            <br>
+
+            <h2 class="Freshh"><mark>
+                સફાઈ</mark></h2>
+            <br>
+            <p class="freshh">
+                દરેક મગફળીને સંપૂર્ણ રીતે સાફ કરવામાં આવે છે <br>જેથી તેમાંથી કોઈપણ અશુદ્ધિઓ દૂર થાય, જેથી ખાતરી થાય કે ફક્ત<br> સૌથી શુદ્ધ દાણા જ આગળના તબક્કામાં પ્રવેશી શકે.</p>
+            <br>
+
+            <h2 class="Freshh"><mark>
+                ડી-હુલિંગ</mark></h2>
+            <br>
+            <p class="freshh">મગફળીના બાહ્ય છાલ, જેને હલ તરીકે ઓળખવામાં આવે છે,<br> તેને ધીમેધીમે દૂર કરવામાં આવે છે, જે અંદરના પોષક તત્વોથી ભરપૂર<br> હૃદયને પ્રગટ કરે છે.</p>
+            <br>
+        </div>
+    </div>
+    <div class="content-container">
+        <!-- Left Section (Text) -->
+        <div class="text-section">
+            <h2 class="Traditional"><mark>પરંપરાગત દબાવીને</mark></h2>
+            <br>
+            <p class="traditional">
+                અમે પરંપરાગત તકનીકનો ઉપયોગ કરીએ છીએ,<br> જેમાં મગફળીના કુદરતી સ્વાદ, સુગંધ અને <br>પોષક લાભોને જાળવી રાખવા માટે ઓછા<br> તાપમાને તેલ કાઢવામાં આવે છે.</p>
+            <br>
+
+            <h2 class="Filtering"><mark>કપડાંમાં ફિલ્ટરિંગ</mark></h2>
+            <br>
+            <p class="filtering">તાજા દબાયેલા તેલને કાપડના સ્તરો દ્વારા કાળજીપૂર્વક ફિલ્ટર કરવામાં આવે છે,<br> જે એક પ્રાચીન પદ્ધતિ છે જે કોઈપણ કાંપ દૂર કરે છે<br> અને તેલની સ્પષ્ટતા અને શુદ્ધતા સુનિશ્ચિત કરે છે.</p>
+            <br>
+
+            <h2 class="Packing"><mark>
+                પેકિંગ</mark></h2>
+            <br>
+            <p class="packing">
+                ફિલ્ટર કરેલ તેલ પછી સ્વચ્છ કન્ટેનરમાં પેક કરવામાં આવે છે, જે તમારા<br> ઘરઆંગણે પહોંચાડવા માટે તૈયાર છે.</p>
+            <br>
+
+            <h2 class="Delivering"><mark>પહોંચાડી રહ્યા છે</mark></h2>
+            <br>
+            <h3 class="delivering"><mark></mark> ખાતરી કરો કે રેબા તેલ તમારા સુધી તાજું અને<br> નક્કર સ્થિતિમાં પહોંચે, જેથી તમે દરેક ડંખમાં<br> મૂળ મીઠાશનો અધિકૃત સ્વાદ માણી શકો.</mark></h3>
+            <br>
+        </div>
+
+        <!-- Right Section (Instagram Embed) -->
+        <div class="instagram-section">
+            <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-element elementor-element-cd7d47c elementor-widget elementor-widget-html" data-id="cd7d47c" data-element_type="widget" data-widget_type="html.default">
+                    <div class="elementor-widget-container">
+                        <iframe class="instagram-media instagram-media-rendered" id="instagram-embed-0" src="https://www.instagram.com/rebaa_naturals/embed/?cr=1&amp;v=12&amp;wp=652&amp;rd=https%3A%2F%2Frebaanaturals.com&amp;rp=%2Fabout-us%2F#%7B%22ci%22%3A0%2C%22os%22%3A6468%2C%22ls%22%3A5404.5%2C%22le%22%3A5934.700000001118%7D" allowtransparency="true" allowfullscreen="true" frameborder="0" height="412" data-instgrm-payload-id="instagram-media-payload-0" scrolling="no" style="background: white; max-width: 540px; width: 99.375%; max-height: 100%; border-radius: 3px; border: 1px solid rgb(219, 219, 219); box-shadow: none; display: block; margin: 0px 0px 12px; min-width: 326px; padding: 0px;"></iframe>
+                        <script async="" src="https://www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- Scrolling Text Section -->
+        <div class="scrolling-text">
+            <marquee behavior="scroll" direction="left" scrollamount="10">
+                રેબા શુદ્ધ સીંગતેલ માટે કોલ કરો. Mo. 7698076380 Mo. 9825290144 Premium G-20 Groundnut Oil Pure & Natural Healthy in Every Drop.
+            </marquee>
+        </div>
+</body>
+</html>

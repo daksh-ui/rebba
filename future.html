@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year 4032 - Beyond Future</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000046, #1CB5E0); /* Dark cosmic gradient */
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            text-align: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 5rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            animation: glow 1.5s ease-in-out infinite alternate;
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: #00ff99;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-top: 20px;
+            letter-spacing: 3px;
+            animation: slideIn 1s ease-in-out infinite alternate;
+            font-family: 'Courier New', Courier, monospace;
+            color: #ffffff;
+            opacity: 0.9;
+        }
+
+        /* Glowing effect for title */
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #00ff99, 0 0 30px #00ff99, 0 0 60px #00ff99;
+            }
+
+            100% {
+                text-shadow: 0 0 30px #00ff99, 0 0 60px #00ff99, 0 0 90px #00ff99, 0 0 150px #00ff99;
+            }
+        }
+
+        /* Sliding effect for subtitle */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .navbar {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #00ff99;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: 0.3s ease;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            background-color: #00ff99;
+            color: #121212;
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 20px rgba(0, 255, 153, 0.5);
+        }
+
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #00ff99;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .btn {
+            background-color: #00ff99;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgba(0, 255, 153, 0.7);
+            margin-top: 40px;
+            transition: 0.4s;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #00cc7a;
+            box-shadow: 0 0 40px rgba(0, 204, 122, 0.8);
+            transform: translateY(-5px);
+        }
+
+        /* Cosmic particle background */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(0, 255, 153, 0.7);
+            animation: move 2s ease-in-out infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes move {
+            0% {
+                transform: scale(0) translate(0, 0);
+            }
+
+            100% {
+                transform: scale(1) translate(300px, 300px);
+            }
+        }
+
+        /* Adding particles to the background */
+        .particle:nth-child(odd) {
+            animation-duration: 2.5s;
+            animation-delay: -1s;
+        }
+
+        .particle:nth-child(even) {
+            animation-duration: 3s;
+            animation-delay: -1.5s;
+        }
+
+        /* Footer Styling */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            opacity: 0.8;
+            animation: fadeIn 2s ease-in-out infinite alternate;
+        }
+
+        footer p {
+            margin: 10px;
+        }
+
+        /* Fade In Animation for Footer */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        p {
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            display: inline-block;
+            margin: 0 2px;
+        }
+
+        .G {
+            color: #FF6347; /* Tomato */
+        }
+
+        .o1 {
+            color: #FFD700; /* Gold */
+        }
+
+        .o2 {
+            color: #32CD32; /* Lime Green */
+        }
+
+        .d {
+            color: #1E90FF; /* Dodger Blue */
+        }
+
+        .M {
+            color: #FF1493; /* Deep Pink */
+        }
+
+        .o3 {
+            color: #FF4500; /* Orange Red */
+        }
+
+        .r {
+            color: #8A2BE2; /* Blue Violet */
+        }
+
+        .n {
+            color: #FF69B4; /* Hot Pink */
+        }
+
+        .i {
+            color: #00BFFF; /* Deep Sky Blue */
+        }
+
+        .n2 {
+            color: #FFD700; /* Gold */
+        }
+
+        .g {
+            color: #8B0000; /* Dark Red */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- Main content -->
+    <h1>Welcome</h1>
+    <h2>Step into the Future</h2>
+        <!-- Falling Text -->
+        <div class="falling-text">
+            <p class="G">J</p>
+            <p class="o1">a</p>
+            <p class="o2">y</p>
+            <p class="d">S</p>
+            <p class="M">h</p>
+            <p class="o3">r</p>
+            <p class="r">e</p>
+            <p class="n">e</p>
+            <p class="i">S</p>
+            <p class="n2">w</p>
+            <p class="g">a</p><br>
+            <p class="G">m</p>
+            <p class="o1">i</p>
+            <p class="o2">a</p>
+            <p class="d">r</p>
+            <p class="M">a</p>
+            <p class="o3">y</p>
+            <p class="r">a</p>
+            <p class="n">n</p>
+        </div>
+    <!-- Action Button -->
+    <button class="btn">Join the Revolution</button>
+
+    <!-- Particle Effects -->
+    <div class="particle" style="width: 20px; height: 20px; top: 20%; left: 30%; animation-delay: 0.5s;"></div>
+    <div class="particle" style="width: 30px; height: 30px; top: 60%; left: 50%; animation-delay: 1.2s;"></div>
+    <div class="particle" style="width: 25px; height: 25px; top: 40%; left: 70%; animation-delay: 1s;"></div>
+    <div class="particle" style="width: 15px; height: 15px; top: 80%; left: 10%; animation-delay: 0.8s;"></div>
+    <div class="particle" style="width: 30px; height: 30px; top: 10%; left: 90%; animation-delay: 1.5s;"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy;Created by Daksh Ladola</p>
+    </footer>
+
+</body>
+
+</html>

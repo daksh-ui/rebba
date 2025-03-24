@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heavenly Realm - Swarg</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e0f7fa, #ffffff);
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            text-align: center;
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 4rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #f1c40f; /* Heavenly golden color */
+            animation: glow 1.5s ease-in-out infinite alternate;
+            margin-bottom: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-top: 20px;
+            letter-spacing: 3px;
+            animation: slideIn 1s ease-in-out infinite alternate;
+            font-family: 'Courier New', Courier, monospace;
+            color: #ffffff;
+        }
+
+        /* Glowing effect */
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #f1c40f, 0 0 20px #f1c40f, 0 0 30px #f1c40f;
+            }
+
+            100% {
+                text-shadow: 0 0 20px #f1c40f, 0 0 30px #f1c40f, 0 0 50px #f1c40f, 0 0 100px #f1c40f;
+            }
+        }
+
+        /* Sliding in effect */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .navbar {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #f1c40f;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 10px 20px;
+            transition: 0.3s ease;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .navbar a:hover {
+            background-color: #f1c40f;
+            color: #121212;
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .navbar a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #f1c40f;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .btn {
+            background-color: #f1c40f;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+            margin-top: 40px;
+            transition: 0.4s;
+        }
+
+        .btn:hover {
+            background-color: #d4ac0d;
+            box-shadow: 0 0 40px rgba(212, 172, 13, 0.8);
+            transform: translateY(-5px);
+        }
+
+        /* Heavenly Cloud Animation */
+        .clouds {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0.7;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/clouds.png');
+            background-repeat: repeat;
+            animation: floatClouds 20s infinite linear;
+        }
+
+        @keyframes floatClouds {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* Particle Effects (Stars) */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgba(255, 223, 0, 0.7);
+            animation: moveStars 3s ease-in-out infinite;
+        }
+
+        @keyframes moveStars {
+            0% {
+                transform: scale(0) translate(0, 0);
+            }
+
+            100% {
+                transform: scale(1) translate(300px, 300px);
+            }
+        }
+
+        .particle:nth-child(odd) {
+            animation-duration: 2.5s;
+            animation-delay: -1s;
+        }
+
+        .particle:nth-child(even) {
+            animation-duration: 3s;
+            animation-delay: -1.5s;
+        }
+           /* Animation for Floating Particles */
+           @keyframes floatParticles {
+            0% {
+                opacity: 0;
+                transform: translate(0, 0) scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: translate(300px, 300px) scale(1);
+            }
+        }
+
+        /* Define Particle Delays */
+        .particle:nth-child(1) { width: 15px; height: 15px; top: 10%; left: 20%; animation-duration: 5s; animation-delay: 1s;}
+        .particle:nth-child(2) { width: 18px; height: 18px; top: 50%; left: 60%; animation-duration: 6s; animation-delay: 2s;}
+        .particle:nth-child(3) { width: 12px; height: 12px; top: 70%; left: 80%; animation-duration: 7s; animation-delay: 3s;}
+        .particle:nth-child(4) { width: 20px; height: 20px; top: 20%; left: 40%; animation-duration: 8s; animation-delay: 4s;}
+
+        /* Footer Styling */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #fff;
+            animation: fadeIn 2s ease-in-out infinite alternate;
+        }
+
+        footer p {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#">Heaven</a>
+        <a href="#">Angels</a>
+        <a href="#">Blessings</a>
+        <a href="#">Grace</a>
+    </div>
+
+    <!-- Main content -->
+    <h1>Welcome to the Heavenly Realm</h1>
+    <h2 style="color: #d4ac0d;">Jay Shree Swaminarayan</h2>
+
+    <!-- Action Button -->
+    <button class="btn" >Namste</button>
+
+    <!-- Heavenly Cloud Background -->
+    <div class="clouds"></div>
+
+    <!-- Particle Effects -->
+    <div class="particle" style="width: 15px; height: 15px; top: 20%; left: 30%; animation-delay: 0.5s;"></div>
+    <div class="particle" style="width: 20px; height: 20px; top: 60%; left: 50%; animation-delay: 1.2s;"></div>
+    <div class="particle" style="width: 10px; height: 10px; top: 40%; left: 70%; animation-delay: 1s;"></div>
+    <div class="particle" style="width: 18px; height: 18px; top: 80%; left: 10%; animation-delay: 0.8s;"></div>
+    <div class="particle" style="width: 25px; height: 25px; top: 10%; left: 90%; animation-delay: 1.5s;"></div>
+    
+    <!-- Floating Cloud Background -->
+    <div class="clouds"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p style="color: #d4ac0d;">&copy;Created by Daksh Ladola</p>
+    </footer>
+</body>
+
+</html>
